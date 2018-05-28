@@ -1,4 +1,6 @@
-<?phpnamespace App\Tests\Service;
+<?php
+
+namespace App\Tests\Service;
 
 use App\Service\MoneyFormatter;
 use App\Service\NumberFormatter;
