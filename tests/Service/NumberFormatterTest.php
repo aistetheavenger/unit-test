@@ -10,14 +10,14 @@ class NumberFormatterTest extends TestCase
     {
         return [
             [999500, "1.00M"],
-            [2500000, "3.00M"],
-            [2500000.2, "3.00M"],
+            [2500000, "2.50M"],
+            [2500000.2, "2.50M"],
             [-45004500.333, "-45.00M"],
 
             [99951, "100K"],
             [99951.33, "100K"],
             [999400, "999K"],
-            [-4500450, "-4500K"],
+            [-450045, "-450K"],
 
             [2500, "2 500"],
             [2501.5, "2 502"],
@@ -42,7 +42,7 @@ class NumberFormatterTest extends TestCase
     public function testNumberFormatter($number, $result)
     {
         $numberFormatter = new numberFormatter();
-        $result = $numberFormatter->formatNumber($number);
-        $this->assertEquals($result, $result);
+        $result2 = $numberFormatter->formatNumber($number);
+        $this->assertEquals($result2, $result);
     }
 }
